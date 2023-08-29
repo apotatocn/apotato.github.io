@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>技术文档 | apotato的博客</title>
-  <meta name="keywords" content=" 资料 , C# ">
-  <meta name="description" content="技术文档 | apotato的博客">
+  <title>vueJsonViewer的使用 | apotato的博客</title>
+  <meta name="keywords" content=" vue , vue-json-viewer , json ">
+  <meta name="description" content="vueJsonViewer的使用 | apotato的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="json数据展示：vue-json-viewer当项目需要再网页中展示原始的json数据的时候，我们期望能够对json进行格式化展示，并且能够进行展开和折叠。vue-json-viewer可以帮助我们实现这样的功能。 1. 安装12345&#x2F;&#x2F; Vue2$ npm install vue-json-viewer@2 --save&#x2F;&#x2F; Vue3$ npm install vue-json-viewer">
 <meta property="og:type" content="article">
@@ -503,9 +503,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-技术文档" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-vueJsonViewer的使用" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">技术文档</h1>
+        <h1 class="article-title">vueJsonViewer的使用</h1>
     
     <div class="article-meta">
         
@@ -515,9 +515,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="资料">资料</a> > 
+            <a  data-rel="前端">前端</a> > 
             
-            <a  data-rel="资料&lt;---&gt;技术文档">技术文档</a>
+            <a  data-rel="前端&lt;---&gt;vue">vue</a>
             
         </span>
         
@@ -525,16 +525,18 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">资料</a>
+            <a class="color4">vue</a>
             
-            <a class="color3">C#</a>
+            <a class="color1">vue-json-viewer</a>
+            
+            <a class="color5">json</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-08-25 17:44:17'>2023-08-25 15:39</time>
+            发布时间 : <time class="date" title='最后更新: 2023-08-29 16:14:42'>2023-08-29 15:52</time>
         
     </div>
     <div class="article-meta">
@@ -556,7 +558,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E6%96%87%E6%A1%A3"><span class="toc-text">编程文档</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#C-%E7%BC%96%E7%A8%8B"><span class="toc-text">C#编程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E7%BC%96%E7%A8%8B"><span class="toc-text">Java编程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%AE%97%E6%B3%95"><span class="toc-text">机器学习与算法</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#json%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA%EF%BC%9Avue-json-viewer"><span class="toc-text">json数据展示：vue-json-viewer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85"><span class="toc-text">1. 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE"><span class="toc-text">2. 配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8"><span class="toc-text">3. 使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Attributes"><span class="toc-text">Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-text">事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Slots"><span class="toc-text">Slots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98"><span class="toc-text">主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA"><span class="toc-text">显示</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -572,16 +574,128 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="编程文档"><a href="#编程文档" class="headerlink" title="编程文档"></a>编程文档</h3><h4 id="C-编程"><a href="#C-编程" class="headerlink" title="C#编程"></a>C#编程</h4><ul>
-<li><a href="/pdf/C3%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3.pdf">c#官方文档</a></li>
-</ul>
-<h4 id="Java编程"><a href="#Java编程" class="headerlink" title="Java编程"></a>Java编程</h4><ul>
-<li><a href="/pdf/JavaGuide%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%E7%89%88.pdf">JavaGuide面试突击版</a></li>
-</ul>
-<h4 id="机器学习与算法"><a href="#机器学习与算法" class="headerlink" title="机器学习与算法"></a>机器学习与算法</h4><ul>
-<li><a target="_blank" rel="noopener" href="https://img.apotato.cn/pdf/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90.pdf">时间序列分析</a></li>
-<li><a target="_blank" rel="noopener" href="https://img.apotato.cn/pdf/Python%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98.pdf">Python与机器学习实战</a></li>
-</ul>
+        <h1 id="json数据展示：vue-json-viewer"><a href="#json数据展示：vue-json-viewer" class="headerlink" title="json数据展示：vue-json-viewer"></a>json数据展示：vue-json-viewer</h1><p>当项目需要再网页中展示原始的json数据的时候，我们期望能够对json进行格式化展示，并且能够进行展开和折叠。vue-json-viewer可以帮助我们实现这样的功能。</p>
+<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// Vue2</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install vue-json-viewer@2 --save</span></span><br><span class="line"></span><br><span class="line">// Vue3</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install vue-json-viewer@3 --save</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h2><p>在main.js&#x2F;main.ts中添加以下内容，或者在单独的插件文件中添加.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#x27;vue&#x27;</span><br><span class="line">import JsonViewer from &#x27;vue-json-viewer&#x27;</span><br><span class="line"></span><br><span class="line">// Import JsonViewer as a Vue.js plugin</span><br><span class="line">Vue.use(JsonViewer)</span><br></pre></td></tr></table></figure>
+<p>引入样式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#x27;vue-json-viewer/style.css&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3. 使用"></a>3. 使用</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">json-viewer</span> <span class="attr">:value</span>=<span class="string">&quot;jsonData&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">json-viewer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h3><table>
+<thead>
+<tr>
+<th align="left">属性名</th>
+<th align="left">描述</th>
+<th align="left">是否必传</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>value</code></td>
+<td align="left">JSON data (can be used with <code>v-model</code>)</td>
+<td align="left"><strong>Required</strong></td>
+</tr>
+<tr>
+<td align="left"><code>expand-depth</code></td>
+<td align="left">展开层级</td>
+<td align="left"><code>1</code></td>
+</tr>
+<tr>
+<td align="left"><code>copyable</code></td>
+<td align="left">展示复制按钮</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>sort</code></td>
+<td align="left">排序</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>boxed</code></td>
+<td align="left">为组件添加一个盒样式</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>theme</code></td>
+<td align="left">添加一个和主题相关的类</td>
+<td align="left"><code>jv-light</code></td>
+</tr>
+<tr>
+<td align="left"><code>expanded</code></td>
+<td align="left">默认是否展开</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>timeformat</code></td>
+<td align="left">时间格式化函数</td>
+<td align="left">time &#x3D;&gt; time.toLocaleString()</td>
+</tr>
+<tr>
+<td align="left"><code>preview-mode</code></td>
+<td align="left">不可折叠模式，默认全部展开</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>show-array-index</code></td>
+<td align="left">展示数组的下标</td>
+<td align="left"><code>true</code></td>
+</tr>
+</tbody></table>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">描述</th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>copied</code></td>
+<td align="left">复制文本后的事件</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>keyclick</code></td>
+<td align="left">点击key的事件</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h3><table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">描述</th>
+<th align="left">Scope</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>copy</code></td>
+<td align="left">自定义拷贝按钮</td>
+<td align="left"><code>&#123;copied: boolean&#125;</code></td>
+</tr>
+</tbody></table>
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>alt</code> + click</td>
+<td align="left">展开当前节点下的所有节点</td>
+</tr>
+</tbody></table>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>有两个办法创建自定义主题, (e.g. <code>my-awesome-json-theme</code>):</p>
+<ol>
+<li><p>添加 <code>theme=&quot;my-awesome-json-theme&quot;</code> JsonViewer的组件属性</p>
+</li>
+<li><p>复制粘贴下面的模板并且根据自定义的theme名称做对应调整</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">// values are default one <span class="selector-tag">from</span> jv-light template</span><br><span class="line"><span class="selector-class">.my-awesome-json-theme</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#525252</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: Consolas, Menlo, Courier, monospace;</span><br><span class="line"></span><br><span class="line">  <span class="selector-class">.jv-ellipsis</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#999</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">0.9</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.9em</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span> <span class="number">4px</span> <span class="number">2px</span> <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">vertical-align</span>: <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">    user-select: none;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.jv-button</span> &#123; <span class="attribute">color</span>: <span class="number">#49b3ff</span> &#125;</span><br><span class="line">  <span class="selector-class">.jv-key</span> &#123; <span class="attribute">color</span>: <span class="number">#111111</span> &#125;</span><br><span class="line">  <span class="selector-class">.jv-item</span> &#123;</span><br><span class="line">    &amp;<span class="selector-class">.jv-array</span> &#123; <span class="attribute">color</span>: <span class="number">#111111</span> &#125;</span><br><span class="line">    &amp;<span class="selector-class">.jv-boolean</span> &#123; <span class="attribute">color</span>: <span class="number">#fc1e70</span> &#125;</span><br><span class="line">    &amp;<span class="selector-class">.jv-function</span> &#123; <span class="attribute">color</span>: <span class="number">#067bca</span> &#125;</span><br><span class="line">    &amp;<span class="selector-class">.jv-number</span> &#123; <span class="attribute">color</span>: <span class="number">#fc1e70</span> &#125;</span><br><span class="line">    &amp;<span class="selector-class">.jv-number-float</span> &#123; <span class="attribute">color</span>: <span class="number">#fc1e70</span> &#125;</span><br><span class="line">    &amp;<span class="selector-class">.jv-number-integer</span> &#123; <span class="attribute">color</span>: <span class="number">#fc1e70</span> &#125;</span><br><span class="line">    &amp;<span class="selector-class">.jv-object</span> &#123; <span class="attribute">color</span>: <span class="number">#111111</span> &#125;</span><br><span class="line">    &amp;<span class="selector-class">.jv-undefined</span> &#123; <span class="attribute">color</span>: <span class="number">#e08331</span> &#125;</span><br><span class="line">    &amp;<span class="selector-class">.jv-string</span> &#123;</span><br><span class="line">      <span class="attribute">color</span>: <span class="number">#42b983</span>;</span><br><span class="line">      <span class="attribute">word-break</span>: break-word;</span><br><span class="line">      <span class="attribute">white-space</span>: normal;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.jv-code</span> &#123;</span><br><span class="line">    <span class="selector-class">.jv-toggle</span> &#123;</span><br><span class="line">      &amp;<span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">0px</span> <span class="number">2px</span>;</span><br><span class="line">        <span class="attribute">border-radius</span>: <span class="number">2px</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">        &amp;<span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">          <span class="attribute">background</span>: <span class="number">#eee</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h3><p><img src="https://img.apotato.cn/images/image-20230829161419333.png" alt="image-20230829161419333"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2426712259@qq.com </span>
