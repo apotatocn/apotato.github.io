@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>技术文档 | apotato的博客</title>
+  <meta name="keywords" content=" 资料 , C# ">
+  <meta name="description" content="技术文档 | apotato的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="一、面试准备篇如何准备Java面试前言大家身边一定有很多编程比你厉害但是找的工作并没有你好的朋友！技术面试不同于编程，编程厉害不代表技术面试就一定能过。 现在你去面个试，不简单准备一下子，那简直就是往枪口上撞。我们大部分都只是普通人，没有发过顶级周刊或者获得过顶级大赛奖项。在这样一个技术面试氛围下，我们需要花费很多精力来准备面试，来提高自己的技术能力。“面试造火箭，工作拧螺丝钉” 就是目前的一个常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试指北">
+<meta property="og:url" content="http://www.apotato.cn/2023/08/25/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97/index.html">
+<meta property="og:site_name" content="apotato的博客">
+<meta property="og:description" content="一、面试准备篇如何准备Java面试前言大家身边一定有很多编程比你厉害但是找的工作并没有你好的朋友！技术面试不同于编程，编程厉害不代表技术面试就一定能过。 现在你去面个试，不简单准备一下子，那简直就是往枪口上撞。我们大部分都只是普通人，没有发过顶级周刊或者获得过顶级大赛奖项。在这样一个技术面试氛围下，我们需要花费很多精力来准备面试，来提高自己的技术能力。“面试造火箭，工作拧螺丝钉” 就是目前的一个常">
+<meta property="og:locale">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/719f554c-dc08-4dd5-8dea-ef9b34755479-1666093508564122.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/5a0cb06c-a8e6-479b-8ffc-c59da2d62b44-1666093545588124.webp">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/52c51d1b-3e5d-4b22-b86a-abda3ac2dc43-1666093556210126.webp">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/bf51384f-7026-4f6e-852f-20c93819b3a8-1666093569737128.webp">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ed41ad32-9058-4cef-b100-56712d909447-1666093596415130.webp">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/3b973faa-21f5-4078-84cf-9f3797dbd834-1666093604159132.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/9284b079-786d-4bdd-bbd5-36c91f58e9ed-1666093736347134.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/882a8258-d2d2-4a39-9d64-3c6373d8c4dc.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/952dc989-4dde-4082-afa3-ee27fd5fbea9.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/827799aa-d3d0-454e-849a-39a5882d2ec7.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/01aae7c4-bd79-40f3-b8c6-2d9febaba9d0.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/94151987-17b4-4d28-b6bf-7fed6120cecd.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fguide-blog-images.oss-cn-shenzhen.aliyuncs.com%2Fjavaguide%2Fdubbo-modules.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Fbb0639124ff5896b6735f06c4f555b98.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F0486ec54187e80ecd07a81aafebbf278.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/6feb1a70-cf36-4632-b9ac-55eb430b87a0.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/8b23a419-8370-42be-8ebc-02455f3b3236.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/a579fca9-a4c7-4c5b-8ec3-7816abc45084.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/27aa2047-0b05-4393-89b7-b6744ae70f38.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/5aed393a-f5d3-41eb-8476-18913997deb3.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/c81c0f02-24ac-4a6a-bab5-0240c060b176.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/5fd25717-d7cd-492b-b964-84913ce4621f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/c065470a-b2c0-4896-ab99-af854cd7dd43.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/5b4d6cab-f3a2-4f51-a72d-dbaa2eb31344.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/4d46853e-e08c-4f25-9018-c7c3f0c6c181.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/3e29bdbc-ebe5-4377-bb63-249fcad54b4c.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/55e1c636-7cea-4096-aca6-2d8a37aeaccc.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/5c3d6977-effe-4e19-a308-07eeb18c889a.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/4f316405-9db0-417f-97df-4361fa7b38a9.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/8b91f2dc-b533-4550-a899-0556575af9a0.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/39f39d58-e9bd-40d5-81c6-a2b336cfecfc.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/90a179b6-56a8-4578-8d2a-e025f05cd8fe.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/8e1fbabe-a489-4087-a272-ccad0658657d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/86195e52-a0e4-4d85-a838-79f2efa3eb70.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/0c122e2a-6b72-4109-bc8e-3d6d47228df5.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/f26070f9-301f-455f-aa86-ae7692540851.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/8882684f-e219-4682-99bd-cf0b83c5bfc2.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/c9786f17-5e06-424d-be14-b9a4ba286cf6.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/958d8395-2fa0-4821-b399-a62a42a1e6fe.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/917c1dec-c5ee-4855-91ed-3508a673542e.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/657869aa-2426-4c4e-ac19-56599f12844e.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/3cda6de8-d577-40ac-ad08-fd6b5a7f594d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/c6f47c75-98cf-4d46-b8fb-bfdaf79ae97c.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/7e0ffdfd-5029-4335-bb2d-78d4e8983fef.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/cb527169-4489-4076-88ea-dea046ed0b29.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/34a9da65-1e02-4aaa-80ce-5e5b34e4c6cf.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/5fd25717-d7cd-492b-b964-84913ce4621f-1666096434511182.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/30362dad-4243-4d2c-94c6-49217df1a32d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/0e5f4e3b-8493-49ca-9a9d-0d0b159946c5.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/images-1666096563338186">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/81016677-6496-4a18-bd56-97ae95537f9b.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/3483dec6-a48f-4a58-96cd-02e78a19879a.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/fab45673-7a8f-4f24-b4dd-f8c2b5d010e6.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/65d7e277-d1b4-439b-8c0e-e74d1062783e.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/435595f6-4b41-4e84-826b-9cc92f1dcb36.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b1a58f5a-1be3-4365-ad9a-e2f61fad53f0-16657490089161.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b6868b10-8e2f-4b4c-899a-ae93248a2640.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/233dc15c-ea84-4a23-b679-ebaa1763b70b.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F20210625085635200.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/image-20221014203252561.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F20210510110935773.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F2021051011143961.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Fc0e01ae29ba72593b49c0e0f2c152771.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F20210625091858288.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F20210624203212318.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/bbcad419b2e3ecac19d2becb0a764cc7.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ce5576fd8e7ef8aa2ef1a6f03f99544a.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/55d67e70fac5f7f2f97742acb5713fb5.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1623048967543-fa87d17d-2d72-40af-8608-c5cb40264ae3.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1623048967534-1b8661e0-fc57-4890-9efe-a7f492c799be.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/2021060714195385.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/up-d90863bb4c39ef96f9893244b9d5f1376ac.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/up-c25cf4cc1d4d3a484b4db93672138b8c104.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/20210311135636547.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/20210609182846318.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/20210617101513454.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/20210617104746905.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1624285625987-aacc840a-7f40-4c54-b3ac-05f3a06c9834.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1624285625926-e19b9405-dc8e-4bfa-a60f-b6e1ba9c05a9.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1624285625911-0ce3c6ad-7016-4da9-8e84-d73312325b8d.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1624285625848-2592f894-14e9-4069-947e-2ae7d675ae5f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ae18d67d-3733-498c-82ee-9b6381ff3a54.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/6b6dfba3-0812-4cc7-8a3f-2a31841acf67.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/d541f2c1-a6a8-4dda-8297-98095f3f530e.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/409fa4a1-cdb5-498d-8579-32780559a6f4.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/854ccdbc-7007-4dbc-82b1-9d5a14aac717.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/4c1f605d-6e63-4269-8388-592ca06eb79e.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/48555656-73e2-4406-a89f-3f7c07b9fd2e.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/4501e55b-1180-475b-b25c-712883926283.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/39435554-21ee-410a-b22c-00f877dad1b7.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/4d3ca64d-1a7a-4062-a747-b5c3b6236526.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/12dca35d-3c38-4770-ba60-c80ef77799dd.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/4b963425-d537-4cc0-ac3d-e22de616639c.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1b4c8488-6fee-4021-b1b1-ce347fa70057.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/dd88cf8c-9017-45a7-be9f-22e6c1e4a14c.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/20190624122126398.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1624285967500-eb053522-effc-475a-a1dc-eb410d76f572.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1624285967455-d13860a6-06cb-4397-ac09-ca3789187e1a.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1624285967508-983b174a-58dd-4327-b345-8027a3f42a21.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1624285967445-1152e468-bef7-4d9a-924b-4ef3dad343e0.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1624285967551-d3b2369c-21de-4c90-9777-928091acb617.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1624285968982-79ae67ec-fef4-4dc9-8b65-80d1830a78c4.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b636f4cf4c3a9d8ee280f2c1ea429ce2.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/51eb094e11b71dfeff75f93e99dc7856.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/3635ed695643e41cc9fd771334078b0d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/10f950d32f14aa81d0677156837572c5.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/11b0bd1c-95ae-4ef1-9aa1-0cc1fee5962a.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/0aa00c3f-97fb-42b6-9297-812b2b0b7b60.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/c49008a9-3f35-42cd-b851-f6a2382478b3.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b1f213da-223c-4246-aece-e9392a454941.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/27f11d5a-4106-4aef-8df5-dc178d414470.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/28f7d214-c451-4e77-abe9-e65343c4f428.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1d8eb77b-3fb3-4598-865c-ab6792ea866f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/92144f5e-a19f-42d1-8629-9cadf2371688.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/820121d0-ca33-44d4-8968-69d5a9c889f5.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/34a59f7f-c3ee-4fd9-ace8-8be54bc4838d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/c9b71f01-e4ca-45c3-9265-644b371c1f17.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/5e5d5bdb-26f3-4902-a91d-9ec1078351e2.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/38327ce5-7204-42d3-a21d-e5fe1ef60820.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/54ad8c18-d448-46b1-984c-5e86782ba458.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b244b25a-dda1-4981-9b43-810c8ecd9ef4.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/d52360ef-fed6-4cd5-a604-01109cb4162d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ccb9f5e2-301c-4075-b765-4d3006f5f3b2.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/images">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/images(1)">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/images(2)">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg2018.cnblogs.com%2Fblog%2F1174710%2F201909%2F1174710-20190925074904497-1088606861.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/local-cache.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/distributed-cache.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/multilevel-cache.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/fd814571-c1ae-4f7e-aad8-5dac5b741de8.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/cfa0a217-53d2-45d8-b9e9-13970de9982c.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/0126e23d-f0d1-4c30-a568-b60405b3dda8.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/e685e967-1655-4424-a75d-490101b52087.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/redis-master-slave-sentinel.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/redis-master-slave-sentinel-ping.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/redis-master-slave-sentinel-ping-sdown.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/redis-master-slave-sentinel-ping-odown.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/f682fc80-930c-4e35-978b-496b856d790b.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/bd28bbbd-0ed4-46e6-ba94-aba9c730934d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/de254bdb-ab83-44f1-aff5-f5267f19a444.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/5c60bf36-e37b-4136-8986-584a88d8f17f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/bef6547a-7325-4cdc-8fa5-b3db66826be2.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/7fefb5f3-1978-432b-9a6b-3e1608d033df.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/d6eb12c9-d6a9-4f7b-b0b7-158b0d735042.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/06f32493-52dc-4c53-8522-fb98e72da782.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fguide-blog-images.oss-cn-shenzhen.aliyuncs.com%2Fgithub%2Fjavaguide%2Fdatabase%2Fredis%2Fredis-cluster%2Fredis-cluster-3-find-hash-slot.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/image-20221017215237019.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/cb3b3001-6cd6-4bfc-b46e-16feb5258b6c.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ca358827-2d14-40cd-ab6a-64ec1ea21428.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F20210201160425128.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F699e89ed90febc77dafa5875b0320d2d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Fff75430c69e043a044bef1a355023dfe.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F6a90b193af22b397d3f8ef2b51064e6f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Fbf95cdf34c3dd219e9d7422d74aa20b0.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Fd5e0f71bf6b88948365765b3b3887f6c.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F3d900575010cb6c8c743e3a6f7ad01f1.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fguide-blog-images.oss-cn-shenzhen.aliyuncs.com%2Fgithub%2Fjavaguide%2Fsearch-engine%2Fes%2Fprocess-flow-of-standard-analyzer.png">
+<meta property="og:image" content="https://www.yuque.com/api/filetransfer/images?url=https://img-blog.csdnimg.cn/20210201174121371.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM0MzM3Mjcy,size_16,color_FFFFFF,t_70&sign=71f32bb2d51d9ff7110f4332ef27c7d138beaa9176d7c501e41c186a06be306f">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Ff82d8fe41a47fa739eee8cad7ebcb9d8.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F5c4a078f673d83329c5eb90bf9720de8.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fwww.dbi-services.com%2Fblog%2Fwp-content%2Fuploads%2Fsites%2F2%2F2022%2F01%2FElasticsearch-index-shards.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/c7f84ba8-d183-4d3a-ad1a-5225c00c9247.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/036f4674-44ca-42bb-91d5-9256452e6316.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/823d9ef9-2f6d-4533-9c31-1ab278115937.jpg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ca80695a-53b5-48a4-b54d-b2fa021ebc69.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F65cda835ebfc0909924fc3cdb88099a7.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Ffcd551063cc03f0b8afb238f6a569fde.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Ff2f7557a44dbb95963b8ddd6a0960bb9.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F6e1e15c1448cc2bf5d9c24446f3c515b.png&sign=cc48ba24302d0ef7ab3a604d6ce6e27aec3adb38f07b9adfbf1757299bb3bbe2">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/images(1)-166606199525910">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Fe5493f74f5ed16c462c36654170e16ae.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F0e694ecd1399d78b8983f22fc0e2341e.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F4059d7d2e2d73b876774ce7e55cc819c.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/d142a1cd-45b5-446c-96fd-9627c4f7741c.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/a1b38b45-dc8b-4af7-9053-92df542f2179.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/54e900aa-bf51-41dd-8673-c21eae472f2f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1666275736996-6a3442bd-e8d5-4e4c-9878-1df1c1ef7f08.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1666275749034-48b29e36-6fe9-4915-a0bd-774b79ded766.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1666275758824-30812e9e-4bf6-46c7-a17f-9f2e2ea9c175.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fguide-blog-images.oss-cn-shenzhen.aliyuncs.com%2Fgithub%2Fjavaguide%2FSpringCloudNetflix.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fapolloconfig%2Fapollo%40master%2Fdoc%2Fimages%2Fgray-release%2Fview-release-history.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fa75ccb863e4a401d947c87bb14af7dc3.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F79c7445f9dbc45adb45699d40ef50f44.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fe63ef8dc739548e8b504632b151ba4c7.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/image-20230214132043857.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1666839474634-c00929d5-49c2-4d89-8aeb-2c9eebd75712.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fguide-blog-images.oss-cn-shenzhen.aliyuncs.com%2Fgithub%2Fjavaguide%2Fmysql%2FACID-167635307295839.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/image-20230214132224195.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F20210526162552353.png">
+<meta property="og:image" content="https://www.yuque.com/api/filetransfer/images?url=https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/distributed-system/distributed-transaction/distributed-transaction-with-two-services.png&sign=49a53a4f4598f7373bae90515fd1a2c4a4ed0e44184a8ad6a20aada34ca560fb">
+<meta property="og:image" content="https://www.yuque.com/api/filetransfer/images?url=https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/distributed-system/distributed-transaction/distributed-transaction-solution-summary.png&sign=1d3e071788d14785e0177c96a4c6387a6ad3dd37625f5b7a5a9c0f3201868067">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fguide-blog-images.oss-cn-shenzhen.aliyuncs.com%2Fgithub%2Fjavaguide%2Fdistributed-system%2Fdistributed-transaction%2Fxa-specification-roles.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1666839398805-8d026011-316f-497a-9c11-e5a2e4a4b669.png">
+<meta property="og:image" content="https://www.yuque.com/api/filetransfer/images?url=https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/distributed-system/distributed-transaction/distributed-transaction-2pc-ready.png&sign=513d60918c71581a01b67490b0c565cbf884db266ad905ec52ce09377eca9b76">
+<meta property="og:image" content="https://www.yuque.com/api/filetransfer/images?url=https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/distributed-system/distributed-transaction/distributed-transaction-2pc-not-ready.png&sign=b05caeeb0d69ef8255689bf378c5bb046108ff3b94f06d91c514d09b2b485f3c">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1666839392078-2129a477-9728-4d28-8b47-8aa4fd74570c.png">
+<meta property="og:image" content="https://www.yuque.com/api/filetransfer/images?url=https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/distributed-system/distributed-transaction/distributed-transaction-3pc-ready.png&sign=8368a51b88493f73dbfe67cf0efcb82a02ea4ef098a5ab7873911e1865802e2f">
+<meta property="og:image" content="https://www.yuque.com/api/filetransfer/images?url=https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/distributed-system/distributed-transaction/distributed-transaction-tcc-confirm.png&sign=82dc875113cad8430e870b66d153590ac5736da4e7bba748ec2422fd79137ecf">
+<meta property="og:image" content="https://www.yuque.com/api/filetransfer/images?url=https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/distributed-system/distributed-transaction/distributed-transaction-tcc-cancel.png&sign=33784c922ea4e16f29df6d994d4a6947299170634a68cbc30e13299b8ca5a133">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fguide-blog-images.oss-cn-shenzhen.aliyuncs.com%2Fgithub%2Fjavaguide%2Fdistributed-system%2Fdistributed-transaction%2F2pc-vs-tcc.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F2021060810404597.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F20210608114710962.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F20210608120207740.png">
+<meta property="og:image" content="https://www.yuque.com/api/filetransfer/images?url=https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/distributed-system/distributed-transaction/distributed-transaction-saga.png&sign=5d87613d39f415516e1cd40263a0cfc871c4340eb9fa34d7fe13647f167de18b">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2F20210611101344496.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1666351430977-06aeb3f0-ac03-4916-a6ac-4574fb979b42.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1666351431508-d051cfb1-a325-44dc-b551-588c3ae0ce2d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1666351430632-4fe8a2cc-0036-4b4b-a4c1-b055c34df407.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F39558d5db0fab7865088a9ab3626f575.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F7dc144a91d2afa1126889d250fb3ac03.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Fc16f973d5532a0a4f0d686ee6645b67f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F274a1a229d2e5dff517e065ecf7b436e.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Fff75430c69e043a044bef1a355023dfe-167635397809056.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Fc697787897052b1b8270c9904a7b06c8.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F22f3304f9800c1a49ce1f5c610da262d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F8005ba7b087ad3e00643e5f1c4a854b4.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Ff6df2d0349aad765e9c924ec469f5d59.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fc629732c94614af8a474006aab05099d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/9b350f26-1d2e-4764-8d83-2df06f61afb6.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/5843341e-b6ae-4f3d-8d10-f9984208e0a1.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/923e3076-de6e-4d9e-aaaa-b48f0736f5ee.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/6d7f20f5-6a7c-4b75-a65b-c664c7793b98.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/c9319f3b-5227-4b1c-9b0a-293aaa305927.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/42ee5022-c625-4c6d-99ef-cb98a463aff1.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/c9d995d5-b6cc-4388-ad36-b43cf7e573f3.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/3bf9d0c4-b460-4b2c-91bb-2284fe8a5c19.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b2ac43ef-f3d1-44cf-8f11-e398a9dec838.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/eb286a4d-846b-48b8-881a-39cfdeb577fc.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/f45c04f4-f2fb-493f-be41-3d7376f7d29f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/images-166608888908056">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/bceba348-2c09-4f54-9b8f-601267af36ea.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/5c24acef-d868-4390-b34e-1a6ff0db56a8.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/7dc30533-b32c-4c6c-8dcd-86e0cb898a13.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/3022007b-849e-4c12-a10e-bc30853eae2c.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/284a94cf-b9d8-432f-95cc-8eaca35375e3.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/16c11043-d549-4285-bd6b-71a08cbcf2dc.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/9829cd04-9801-4b0f-94d8-13f029dcc401.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/31fff0d5-d320-496c-80e9-0e94c77085ba.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/95c48321-1dde-4f09-b87f-1600a1767328.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/cb62034b-da57-41d5-92ad-41e22eaa75c8.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/d56a9859-9cd0-4e6f-bb82-564c31a7e4bf.jpg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/d04dff39-e986-4058-b4e0-bbab811adcbb.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/88c4b321-48e0-4997-b5d1-ae280a81a4b3.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/f94f1d3e-80ab-44cc-b254-ed03b0fc7141.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/image-166609093307872.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/image(1)-166609094571574.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1164f4af-9b0f-4991-a694-11e2bfd3abb1.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/image(2)-166609100201077.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/13a7b586-e6be-48f1-abc6-101212576293.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/image(3)-166609102389080.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/image(4)-166609103233882.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/66a6ca67-7a4e-4169-b1d0-a0081de7e485.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/7e8f7798-0eb9-47d1-9a10-1252deea4926.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1d453c9f-b91f-4e86-bd32-c8947e65e982.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b6cd5843-9f64-4ad1-ab54-a4cf9ba6da9a.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/8fc8cc93-b704-48dd-9838-cfac757c2026.jpg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fstatic001.geekbang.org%2Fresource%2Fimage%2F6e%2Fce%2F6eeaeb93839adcb4e76c15ee93f545ce.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fstatic001.geekbang.org%2Fresource%2Fimage%2F30%2Fcf%2F309cae2e132210489d327cf55b284dcf.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fstatic001.geekbang.org%2Fresource%2Fimage%2Fcc%2Fed%2Fcc968a11925591df558da0e7393f06ed.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Ffiles.mdnice.com%2Fuser%2F3586%2F2d678e57-5469-42c6-844e-fe001782f61a.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fstatic001.geekbang.org%2Fresource%2Fimage%2Fbe%2F96%2Fbe22494588ca4f79358347468cd62496.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fstatic001.geekbang.org%2Fresource%2Fimage%2F62%2F23%2F6260716096c77cb89a375e4ac3572923.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/reverse-proxy.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/forward-proxy.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/3bf9d0c4-b460-4b2c-91bb-2284fe8a5c19-1666092050468103.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fgitee.com%2FSnailClimb%2Fblog-images%2Fraw%2Fmaster%2Fnginx%2F%2Fupstream_check_module.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fgitee.com%2FSnailClimb%2Fblog-images%2Fraw%2Fmaster%2Fnginx%2F%2Fnginx-architecture.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ed6dac3c-5e2b-43da-b1ab-b4716acabff4.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/c1ab0b4c-1f26-4b0f-ae82-fee2b371fbb3.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ebc3adcf-bfc0-48bd-ad3e-2fc12242fb63.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/d60f05c9-ca74-479b-88ae-af5eb102b9c3.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b5a4c9e8-a55b-4efb-8f61-f92c5d8e4bc8.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/32257905-0f0a-429a-8315-e0c9fb8c83bf.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/d08cb78d-c819-4e89-ac8e-066ebb8f6e73.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/fce86b2a-3f29-46ec-9b4c-d4962614253f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/67a45c57-5cea-40a2-9cae-3f428b4cfa77.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/69a5f9a4-63c8-440a-9bc9-04d3f0809c91.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/8376b3c6-ab90-40a4-bcf5-29e9d7f95fe6.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b1fc2871-5d5a-4127-a139-359b80e6156d.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/851b4a8c-723d-4814-825e-e6da2b408dc3.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/cfa7b253-92a7-4d97-b646-04e6b7be6254.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/008c1c0d-0c5c-44c3-ba70-011e87f622d5.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/fa59f2d2-f8e4-48f0-b37d-51ac52428672.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/c751e247-d0dd-415c-bdd0-f7e5404b4c0a.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/images-1666097216937197">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/cf5f999b-c873-431a-90fb-20a3499433e8.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/image-20221018204940502.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Fguide-blog-images.oss-cn-shenzhen.aliyuncs.com%2Fgithub%2Fjavaguide%2Fmysql%2FACID.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/2e6cc00a-802b-4def-ba55-0b24a33febc6.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b27e49f7-b582-4968-b17d-4823f99f0913.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/92a2e5c2-b153-4e11-8acb-79964ce147db.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/36eab896-7dc7-4910-99eb-374db0588993.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b25512d7-e90e-479f-ba0b-532fa1ccf046.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b4f54ccf-cdec-453f-973b-db96cccd58e4.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/80884b42-ffbe-4f1e-a28b-caeb2e066d95.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/d297cd45-5cc9-4842-9000-ac0593f392e9.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/aa9a4900-85ac-4d41-94ac-165bc7f30a2c.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/7dbf7d1a-7427-44f7-afe3-48e4aff4426b.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/f215c483-6b8e-4c65-8d4e-009592aced33.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/92139d90-f796-41b9-8dc0-b6e3f8226135.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/73ecd32e-7470-443f-969e-35b508fcb1e9.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/79b40987-1c42-4f7e-a7bb-c26ec48801a9.jpeg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/b0936b34-3036-4213-a7d2-6319471b639f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/cfc46cae-c8e2-498e-9894-e5a9348002cb.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ad0fe5f3-298e-4009-be9c-141b4ee2e679.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/fc7da9e2-7400-41cd-b081-2c6be85969a7.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1a23c0a0-ddd7-4f09-a91a-b7fb907c9506.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/eea19b32-006a-4e40-9c41-366771bf5d7e.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/imagesurl=https%3A%2F%2Farticle-images.zsxq.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/6a623f51-6d6f-497f-a1bd-8b2e292aa479.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/e906e24a-c7e8-4f89-ba31-379c53f51eb4.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/58ad9b51-72c5-48ca-918c-88be2d302187.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ce224754-d720-496d-bdb4-01b4a9ec6d4b.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/4e1cf970-2912-4dd2-9730-07cd43f34a7f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/1663222443004-c18f3896-7801-4efc-a1c2-a14b28deacc5.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/google-search-picture.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/google-seach-open-multiple-pages.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/google-seach-site-website-domin.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/google-seach-site-website-domin(1).png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ebabb2d3-5bf2-4e65-b3aa-459ca6327d27.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/f8c6e1ca-f487-4aa8-aebc-a0d0cd9bbfd1.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/2fce6f9a-f9f5-4d7f-9abd-eb0f784ad971.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/402f70fb-37fb-4bbe-bcf0-72d1fae4e0bb.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/dbf6a76d-cbc7-4e22-8594-3c4d9be8ca3a.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/f2046518-9339-4f86-8043-cd47711d5a52.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/9fc826f9-baee-4ecd-8e8b-aec6899506e5.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/72eadf31-b060-4ea3-9c85-49c9e4d98948.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/190eedcc-08bf-4479-94ff-2d90432a612a.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/68fe4b9c-5ca1-4dc6-b000-65134c1518ea.jpg">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ffc777e5-db73-40aa-9c64-51f3966aff5f.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/cd3b6583-ec31-45c3-ba4e-b27c997da611.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/359cdbce-067f-4f9e-b2b9-6fda44cc5a86.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/dac59b42-0d7a-4e51-ac43-6103efb763d2.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/ea9a01cf-0996-41ca-a036-ae105af62c09.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/9bf090cf-4f62-421a-bd39-b0c0cd0a29a4.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/f7d10a06-227c-4d20-855f-d452ff50097b.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/dac59b42-0d7a-4e51-ac43-6103efb763d2-166615683589049.png">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/images-166615694601151">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/images(1)-166615695771153">
+<meta property="og:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/0940fd92-67a2-4584-baa5-14ab2bf40340.png">
+<meta property="article:published_time" content="2023-08-25T08:21:26.000Z">
+<meta property="article:modified_time" content="2023-08-29T06:21:43.748Z">
+<meta property="article:author" content="apotato">
+<meta property="article:tag" content="面试资料">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.apotato.cn/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97.assets/719f554c-dc08-4dd5-8dea-ef9b34755479-1666093508564122.png">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>apotato</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/apotatocn"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/5mao-4-49"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://blog.csdn.net/weixin_43064399?type=blog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:2426712259@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=2426712259&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=478247833"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+    <a class="more-menus">更多菜单</a>
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(4)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="资料">
+            <i class="fold iconfont icon-right"></i>
+            资料
+            <small>(2)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="资料&lt;---&gt;技术文档">
+            
+            技术文档
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="资料&lt;---&gt;面试资料">
+            <i class="fold iconfont icon-right"></i>
+            面试资料
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="资料&lt;---&gt;面试资料&lt;---&gt;Java">
+            
+            Java
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Hexo">
+            <i class="fold iconfont icon-right"></i>
+            Hexo
+            <small>(2)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="Hexo&lt;---&gt;HelloWorld">
+            
+            HelloWorld
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="Hexo&lt;---&gt;HelloWorld2">
+            
+            HelloWorld2
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+                <a class="dynamic-menu "
+                   target="_blank"
+                        
+                   href="https://photo.baidu.com/photo/web/home?_at_=1692953689354">相册</a>
+        
+            
+            
+                <a class="dynamic-menu "
+                   target="_blank"
+                        
+                   href="https://github.com/apotatocn">github</a>
+        
+    </div>
+    <div>
+        
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="4">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>面试资料</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>资料</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>C#</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All 资料 面试资料 Java "
+           href="/2023/08/25/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8C%97/"
+           data-tag="面试资料,java"
+           data-author="" >
+            <span class="post-title" title="面试指北">面试指北</span>
+            <span class="post-date" title="2023-08-25 16:21:26">2023/08/25</span>
+        </a>
+        
+        
+        <a  class="All 资料 技术文档 "
+           href="/2023/08/25/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"
+           data-tag="资料,C#"
+           data-author="" >
+            <span class="post-title" title="技术文档">技术文档</span>
+            <span class="post-date" title="2023-08-25 15:39:16">2023/08/25</span>
+        </a>
+        
+        
+        <a  class="All Hexo HelloWorld2 "
+           href="/2023/08/25/hello-hexo/"
+           data-tag="Hexo"
+           data-author="" >
+            <span class="post-title" title="hello hexo">hello hexo</span>
+            <span class="post-date" title="2023-08-25 11:20:19">2023/08/25</span>
+        </a>
+        
+        
+        <a  class="All Hexo HelloWorld "
+           href="/2023/08/25/hello-world/"
+           data-tag="Hexo"
+           data-author="" >
+            <span class="post-title" title="hello World">hello World</span>
+            <span class="post-date" title="2023-08-25 10:16:54">2023/08/25</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-技术文档" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">技术文档</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="资料">资料</a> > 
+            
+            <a  data-rel="资料&lt;---&gt;技术文档">技术文档</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">资料</a>
+            
+            <a class="color3">C#</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2023-08-25 17:44:17'>2023-08-25 15:39</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E6%96%87%E6%A1%A3"><span class="toc-text">编程文档</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#C-%E7%BC%96%E7%A8%8B"><span class="toc-text">C#编程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E7%BC%96%E7%A8%8B"><span class="toc-text">Java编程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%AE%97%E6%B3%95"><span class="toc-text">机器学习与算法</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="编程文档"><a href="#编程文档" class="headerlink" title="编程文档"></a>编程文档</h3><h4 id="C-编程"><a href="#C-编程" class="headerlink" title="C#编程"></a>C#编程</h4><ul>
+<li><a href="/pdf/C3%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3.pdf">c#官方文档</a></li>
+</ul>
+<h4 id="Java编程"><a href="#Java编程" class="headerlink" title="Java编程"></a>Java编程</h4><ul>
+<li><a href="/pdf/JavaGuide%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%E7%89%88.pdf">JavaGuide面试突击版</a></li>
+</ul>
+<h4 id="机器学习与算法"><a href="#机器学习与算法" class="headerlink" title="机器学习与算法"></a>机器学习与算法</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://img.apotato.cn/pdf/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90.pdf">时间序列分析</a></li>
+<li><a target="_blank" rel="noopener" href="https://img.apotato.cn/pdf/Python%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98.pdf">Python与机器学习实战</a></li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2426712259@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: '4b9edb0aa764f4ade679',
+            clientSecret: '0e3c1d0550c0e01d79391d91ee7d372682a535f0',
+            repo: 'comment',
+            owner: 'apotatocn',
+            admin: ['apotatocn'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry"><span class="miit">
+                <img src="/img/gov.png" title="中华人民共和国工业和信息化部">
+                <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">鲁ICP备19000987号-3</a>
+        </span>
+    
+    ©2023-2033 apotato
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 592px;
+    }
+    .nav.fullscreen {
+        margin-left: -592px;
+    }
+    .nav-left {
+        width: 170px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 542px;
+        }
+        .nav.fullscreen {
+            margin-left: -542px;
+        }
+        .nav-left {
+            width: 150px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 542px;
+            margin-left: -542px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://photo.baidu.com/photo/web/home?_at_=1692953689354">相册</a>
+    
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://github.com/apotatocn">github</a>
+    
+</div>
+
+
+</html>
